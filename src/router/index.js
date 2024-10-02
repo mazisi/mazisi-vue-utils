@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Landing from '../components/Landing.vue';
+import Landing from '../pages/Landing.vue';
 import ReadingTimeExample from '../examples/ReadingTimeExample.vue';
+import Resume from '../pages/Resume.vue';
 
 
 const router = createRouter({
@@ -16,6 +17,11 @@ const router = createRouter({
       path: '/examples',
       name: 'Examples',
       component: ReadingTimeExample
+    },
+    {
+      path: '/resume',
+      name: 'resume',
+      component: Resume
     },
 
    

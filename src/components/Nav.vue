@@ -23,6 +23,12 @@
             <RouterLink to="/examples" class="text-gray-900 hover:text-blue-500 font-medium cursor-pointer">
               Examples
            </RouterLink >
+           <RouterLink to="/examples" class="text-gray-900 hover:text-blue-500 font-medium cursor-pointer">
+              Articles
+           </RouterLink >
+           <RouterLink to="/resume" class="text-gray-900 hover:text-blue-500 font-medium cursor-pointer">
+              My Resume
+           </RouterLink >
           </div>
   
           <!-- Mobile Menu Button -->
