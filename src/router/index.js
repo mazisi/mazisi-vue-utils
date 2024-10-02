@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Landing from '../pages/Landing.vue';
 import ReadingTimeExample from '../examples/ReadingTimeExample.vue';
 import Resume from '../pages/Resume.vue';
+import BlogList from '../pages/BlogList.vue';
 
 
 const router = createRouter({
@@ -23,6 +24,12 @@ const router = createRouter({
       name: 'resume',
       component: Resume
     },
+
+    {
+        path: '/blog',
+        name: 'blog',
+        component: BlogList
+      },
 
    
   ]

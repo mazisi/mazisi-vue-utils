@@ -37,7 +37,7 @@
             Vue.js
           </span>
           <span class="bg-yellow-100 text-yellow-500 py-2 px-4 rounded-full font-semibold text-sm text-center animate-fade-in-skill delay-200">
-            Laravel
+            Laravel/PhP
           </span>
           <span class="bg-indigo-100 text-indigo-500 py-2 px-4 rounded-full font-semibold text-sm text-center animate-fade-in-skill delay-300">
             Tailwind CSS
@@ -47,6 +47,12 @@
           </span>
           <span class="bg-purple-100 text-purple-500 py-2 px-4 rounded-full font-semibold text-sm text-center animate-fade-in-skill delay-500">
             Git & GitHub
+          </span>
+          <span class="bg-pink-100 text-pink-500 py-2 px-4 rounded-full font-semibold text-sm text-center animate-fade-in-skill delay-600">
+            React Js
+          </span>
+          <span class="bg-gray-100 text-gray-500 py-2 px-4 rounded-full font-semibold text-sm text-center animate-fade-in-skill delay-700">
+            HTML & CSS
           </span>
         </div>
       </section>
