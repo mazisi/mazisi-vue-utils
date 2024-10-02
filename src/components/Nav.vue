@@ -85,8 +85,9 @@
   </template>
   
   <script setup lang="ts">
+  import { ref } from 'vue';
     import { Braces } from 'lucide-vue-next';
-    const isMobileMenuOpen =  false;
+    const isMobileMenuOpen =  ref(false);
  
 
   </script>
