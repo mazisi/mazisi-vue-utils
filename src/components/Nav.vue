@@ -10,7 +10,7 @@
           </a>
 
           <!-- Error message below the logo -->
-          <p class="mt-2 text-red-500 text-lg font-semibold italic animate-blink">
+          <p class="mt-2 text-red-500 text-sm font-semibold italic animate-blink">
             undefined is <span class="text-blue-500 font-bold">not</span> a function
           </p>
         </div>

@@ -28,9 +28,8 @@
   <script setup lang="ts">
   import { ref } from 'vue';
   import { useReadingTime } from '../composables/useReadingTime';
-  import LoggerExample from './LoggerExample.vue';
       
-      const contentRef = ref(null);
+  const contentRef = ref<HTMLElement | undefined>(undefined);
   
       // Call the useReadingTime composable, passing the options
       const { content, wordCount, velocity, duration } = useReadingTime({
