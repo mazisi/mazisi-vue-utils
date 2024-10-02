@@ -19,6 +19,7 @@
         </div>
       </div>
     </section>
+    <ReadingTimeExample />
 
     <!-- Features Section -->
     <section id="features" class="py-16 bg-white">
@@ -127,9 +128,7 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'LandingPage',
-};
+<script setup>
+import ReadingTimeExample from '../examples/ReadingTimeExample.vue';
 </script>
 

@@ -20,6 +20,9 @@
             <a href="#documentation" class="text-gray-900 hover:text-blue-500 font-medium">
               Documentation
             </a>
+            <RouterLink to="/examples" class="text-gray-900 hover:text-blue-500 font-medium cursor-pointer">
+              Examples
+           </RouterLink >
           </div>
   
           <!-- Mobile Menu Button -->
