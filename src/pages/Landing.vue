@@ -11,7 +11,8 @@
         </p>
         <div class="mt-8">
           <a
-            href="/"
+            href="https://github.com/mazisi/mazisi-vue-utils"
+            target="_blank"
             class="bg-white text-blue-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-blue-100 transition"
           >
             Explore Utilities
@@ -91,7 +92,7 @@
         <h2 class="text-3xl font-extrabold text-gray-900">Explore Our Utilities</h2>
         <p class="mt-4 text-lg text-gray-500">Built for flexibility and ease of use.</p>
         <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-white shadow-lg rounded-lg p-6">
+          <div class="bg-white shadow-lg rounded-lg p-6 cursor-pointer" @click="navigateTo('/view-util')">
             <h3 class="text-xl font-semibold text-gray-900">useFetch</h3>
             <p class="mt-4 text-gray-500">A composable to handle HTTP requests with caching and error handling.</p>
           </div>
@@ -128,5 +129,12 @@
 </template>
 
 <script setup>
+import { RouterLink } from 'vue-router';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+const navigateTo = (path) => {
+    router.push(path);
+}
 </script>
 

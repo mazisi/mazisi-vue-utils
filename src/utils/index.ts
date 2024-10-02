@@ -1,5 +1,5 @@
 export function camelCase(str: string) {
-    return str.replaceAll(/-(\w)/g, (_: any, c: string) => (c ? c.toUpperCase() : ''))
+    return str.replace(/-(\w)/g, (_: any, c: string) => (c ? c.toUpperCase() : ''))
   }
   
   export function capitalize(str: string) {

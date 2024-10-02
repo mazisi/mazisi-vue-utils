@@ -3,6 +3,8 @@ import Landing from '../pages/Landing.vue';
 import ReadingTimeExample from '../examples/ReadingTimeExample.vue';
 import Resume from '../pages/Resume.vue';
 import BlogList from '../pages/BlogList.vue';
+import UtilityList from '../pages/UtilityList.vue';
+import UtilityDetailView from '../pages/UtilityDetailView.vue';
 
 
 const router = createRouter({
@@ -29,7 +31,17 @@ const router = createRouter({
         path: '/blog',
         name: 'blog',
         component: BlogList
-      },
+     },
+     {
+      path: '/utilities',
+      name: 'utilities',
+      component: UtilityList
+    },
+     {
+      path: '/view-util',
+      name: 'view-util',
+      component: UtilityDetailView
+    },
 
    
   ]
