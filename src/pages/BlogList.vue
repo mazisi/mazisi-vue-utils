@@ -41,7 +41,7 @@
             title: 'Understanding Vue.js Reactivity',
             description: 'Learn how Vue.js reactivity works and how you can take advantage of it in your applications.',
             date: 'October 1, 2024',
-            image: '/vue-reactivity.PNG',
+            image: '/images/vue-reactivity.PNG',
           },
           {
             title: 'Tailwind CSS: A Complete Guide',

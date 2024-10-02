@@ -12,7 +12,7 @@
           </div>
         </div>
         <!-- Headshot Photo -->
-        <img src="/public/mazisi.jpg" alt="Mazisi Msebele" class="mt-6 sm:mt-0 w-32 h-32 object-cover rounded-full shadow-lg animate-bounce-in">
+        <img src="../assets/mazisi.jpg" alt="Mazisi Msebele" class="mt-6 sm:mt-0 w-32 h-32 object-cover rounded-full shadow-lg animate-bounce-in">
       </header>
   
       <!-- Profile Summary -->

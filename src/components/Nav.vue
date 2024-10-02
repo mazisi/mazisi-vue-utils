@@ -74,7 +74,7 @@
             Home
           </RouterLink>
 
-          <RouterLink href="#features" class="block px-3 py-2 rounded-md text-gray-900 hover:bg-gray-100">
+          <RouterLink to="/" class="block px-3 py-2 rounded-md text-gray-900 hover:bg-gray-100">
             Features
           </RouterLink>
           <RouterLink to="/examples" class="block px-3 py-2 rounded-md text-gray-900 hover:bg-gray-100">

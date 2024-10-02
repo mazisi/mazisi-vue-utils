@@ -11,7 +11,7 @@
         </p>
         <div class="mt-8">
           <a
-            href="#features"
+            href="/"
             class="bg-white text-blue-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-blue-100 transition"
           >
             Explore Utilities
