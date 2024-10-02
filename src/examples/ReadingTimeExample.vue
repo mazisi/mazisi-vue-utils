@@ -1,4 +1,5 @@
 <template>
+  <LoggerExample/>
     <div class="p-6 bg-white shadow-md rounded-lg">
       <!-- Display the content that will be used to calculate reading time -->
       <div ref="contentRef" class="prose max-w-none">
@@ -27,6 +28,7 @@
   <script setup lang="ts">
   import { ref } from 'vue';
   import { useReadingTime } from '../composables/useReadingTime';
+  import LoggerExample from './LoggerExample.vue';
       
       const contentRef = ref(null);
   
