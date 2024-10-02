@@ -70,15 +70,22 @@
       <!-- Mobile Menu -->
       <div v-if="isMobileMenuOpen" class="md:hidden bg-gray-50">
         <div class="px-2 pt-2 pb-3 space-y-1">
-          <a href="#features" class="block px-3 py-2 rounded-md text-gray-900 hover:bg-gray-100">
+          <RouterLink to="/" class="block px-3 py-2 rounded-md text-gray-900 hover:bg-gray-100">
+            Home
+          </RouterLink>
+
+          <RouterLink href="#features" class="block px-3 py-2 rounded-md text-gray-900 hover:bg-gray-100">
             Features
-          </a>
-          <a href="#utilities" class="block px-3 py-2 rounded-md text-gray-900 hover:bg-gray-100">
-            Utilities
-          </a>
-          <a href="#documentation" class="block px-3 py-2 rounded-md text-gray-900 hover:bg-gray-100">
-            Documentation
-          </a>
+          </RouterLink>
+          <RouterLink to="/examples" class="block px-3 py-2 rounded-md text-gray-900 hover:bg-gray-100">
+            Examples
+          </RouterLink>
+          <RouterLink to="/blog" class="block px-3 py-2 rounded-md text-gray-900 hover:bg-gray-100">
+            Articles
+          </RouterLink>
+          <RouterLink to="/resume" class="block px-3 py-2 rounded-md text-gray-900 hover:bg-gray-100">
+            Resume
+          </RouterLink>
         </div>
       </div>
     </header>
