@@ -8,6 +8,6 @@ import { RouterView } from 'vue-router';
     <Nav />
   <main>
     <RouterView /> 
-    <Footer/>
+    <Footer />
   </main>
 </template>

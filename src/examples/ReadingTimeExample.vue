@@ -1,5 +1,5 @@
 <template>
-  <LoggerExample/>
+ 
     <div class="p-6 bg-white shadow-md rounded-lg">
       <!-- Display the content that will be used to calculate reading time -->
       <div ref="contentRef" class="prose max-w-none">

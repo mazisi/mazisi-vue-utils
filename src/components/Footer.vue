@@ -48,16 +48,12 @@
 
       <!-- Bottom Row: Copyright Text -->
       <div class="mt-8 text-center text-sm text-gray-400">
-        © 2024 <a href="https://mrnlabs.com" target="_blank" class="text-teal-400 hover:text-teal-300">mrnlabs</a>. All rights reserved.
+        © {{ new Date().getFullYear() }} <a href="https://mrnlabs.com" target="_blank" class="text-teal-400 hover:text-teal-300">mrnlabs</a>. All rights reserved.
       </div>
     </div>
   </footer>
 </template>
 
-<script setup>
+<script setup lang="ts">
 // You can add any specific JavaScript here if necessary
 </script>
-
-<style scoped>
-/* Add any specific styles if needed */
-</style>

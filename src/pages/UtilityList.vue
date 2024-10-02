@@ -25,11 +25,8 @@
     </div>
   </template>
   
-  <script>
-  export default {
-    data() {
-      return {
-        utilities: [
+  <script setup lang="ts">
+        const utilities = [
           {
             name: 'useFetch',
             description: 'A composable to handle HTTP requests with caching and error handling.',
@@ -42,10 +39,7 @@
             name: 'useForm',
             description: 'Easily manage form validation, input, and submissions.',
           },
-        ],
-      };
-    },
-  };
+        ];
   </script>
   
   <style scoped>

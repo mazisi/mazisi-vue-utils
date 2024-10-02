@@ -8,35 +8,27 @@
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
 // Import the logger utility
-import { logger } from '@/utils/logger'; // Adjust the path to where your logger file is
+import { logger } from '@/utils/logger';
 
-export default {
-  name: 'LoggerComponent',
-  methods: {
-    logSuccess() {
+    const logSuccess = () => {
       // Use the logger's success method
       logger.success('This is a success message!');
-    },
-    logError() {
+    }
+    const logError = () => {
       // Use the logger's error method
       logger.error('This is an error message!', new Error('Something went wrong'));
-    },
-    logBrand() {
+    }
+    const logBrand= () =>  {
       // Use the brand log method
       logger.brand('Brand Message - Custom Color');
-    },
-    logDivider() {
+    }
+    const logDivider = () =>  {
       // Log a divider in the console
       logger.divider();
-    },
-  },
-  mounted() {
-    // Log messages on component mount
-    logger.log('Component has been mounted!');
-  },
-};
+    }
+
 </script>
 
 <style scoped>
