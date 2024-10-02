@@ -5,6 +5,7 @@ import Resume from '../pages/Resume.vue';
 import BlogList from '../pages/BlogList.vue';
 import UtilityList from '../pages/UtilityList.vue';
 import UtilityDetailView from '../pages/UtilityDetailView.vue';
+import ComingSoon from '../pages/ComingSoon.vue';
 
 
 const router = createRouter({
@@ -41,6 +42,11 @@ const router = createRouter({
       path: '/view-util',
       name: 'view-util',
       component: UtilityDetailView
+    },
+    {
+      path: '/coming-soon',
+      name: 'coming-soon',
+      component: ComingSoon
     },
 
    

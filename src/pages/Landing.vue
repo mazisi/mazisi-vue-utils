@@ -92,7 +92,7 @@
         <h2 class="text-3xl font-extrabold text-gray-900">Explore Our Utilities</h2>
         <p class="mt-4 text-lg text-gray-500">Built for flexibility and ease of use.</p>
         <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-white shadow-lg rounded-lg p-6 cursor-pointer" @click="navigateTo('/view-util')">
+          <div class="bg-white shadow-lg rounded-lg p-6 cursor-pointer" @click="navigateTo('/coming-soon')">
             <h3 class="text-xl font-semibold text-gray-900">useFetch</h3>
             <p class="mt-4 text-gray-500">A composable to handle HTTP requests with caching and error handling.</p>
           </div>
