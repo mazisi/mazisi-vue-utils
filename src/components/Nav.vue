@@ -5,15 +5,15 @@
           <!-- Logo -->
           <div class="flex-shrink-0">
             <a href="#">
-              <!-- <img src="/logo.svg" alt="Logo" class="h-8 w-auto"> -->
+              <Braces :size="48" color="#2dd4bf"/>
             </a>
           </div>
   
           <!-- Desktop Navigation Links -->
           <div class="hidden md:flex space-x-8">
-            <a href="#features" class="text-gray-900 hover:text-blue-500 font-medium">
-              Features
-            </a>
+            <RouterLink to="/" class="text-gray-900 hover:text-blue-500 font-medium">
+              Home
+            </RouterLink>
             <a href="#utilities" class="text-gray-900 hover:text-blue-500 font-medium">
               Utilities
             </a>
@@ -79,8 +79,8 @@
   </template>
   
   <script setup lang="ts">
-
-     const isMobileMenuOpen =  false;
+    import { Braces } from 'lucide-vue-next';
+    const isMobileMenuOpen =  false;
  
 
   </script>

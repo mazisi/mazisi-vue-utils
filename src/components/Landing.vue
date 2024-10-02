@@ -19,7 +19,6 @@
         </div>
       </div>
     </section>
-    <ReadingTimeExample />
 
     <!-- Features Section -->
     <section id="features" class="py-16 bg-white">
@@ -129,6 +128,5 @@
 </template>
 
 <script setup>
-import ReadingTimeExample from '../examples/ReadingTimeExample.vue';
 </script>
 
