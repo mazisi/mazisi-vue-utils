@@ -11,6 +11,7 @@
             <li><RouterLink to="/blog" class="hover:text-teal-400">Blog</RouterLink></li>
             <li><RouterLink to="/utilities" class="hover:text-teal-400">Utilities</RouterLink></li>
             <li><RouterLink to="/documentation" class="hover:text-teal-400">Documentation</RouterLink></li>
+            <li><RouterLink to="/sign-in" class="hover:text-teal-400">Sign In</RouterLink></li>
           </ul>
         </div>
         

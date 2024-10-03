@@ -33,9 +33,9 @@
   
       // Call the useReadingTime composable, passing the options
       const { content, wordCount, velocity, duration } = useReadingTime({
-        contentRef,          // Reference to the DOM element containing the content
-        velocity: 180,       // Words per minute (optional)
-        contentSelector: '', // Optionally use a selector if no ref
+        contentRef,
+        velocity: 180, 
+        contentSelector: '', 
       });
   </script>
   
