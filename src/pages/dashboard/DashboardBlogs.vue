@@ -2,7 +2,7 @@
   <div class="max-w-7xl mx-auto p-6 bg-white mt-3">
     <!-- Blog List Title -->
     <header class="mb-8 text-center">
-      <h1 class="text-4xl font-bold text-gray-900 animate-fade-in">Latest Blog Posts</h1>
+      <h1 class="text-4xl font-bold text-gray-900 animate-fade-in">Dashboard Blog Posts</h1>
     </header>
 
     <!-- Categories Tab -->

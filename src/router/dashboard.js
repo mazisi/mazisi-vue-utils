@@ -2,8 +2,8 @@ import DashboardBlogs from '../pages/dashboard/DashboardBlogs.vue';
 
 export default [
   {
-    path: '/dashbord-blogs',
-    name: 'dashbord-blogs',
+    path: '/dashboard-blogs',
+    name: 'dashboard-blogs',
     component: DashboardBlogs
   },
 ]

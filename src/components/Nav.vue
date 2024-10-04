@@ -1,3 +1,17 @@
+<script setup lang="ts">
+import { ref } from 'vue';
+import { Braces } from 'lucide-vue-next'; // Import Lucide icons
+const isMobileMenuOpen = ref(false);
+
+import { useAuthStore } from '@/stores/auth';
+
+const authStore = useAuthStore();
+const { getUser } = authStore;
+
+
+</script>
+
+
 <template>
   <header class="bg-white shadow-lg">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,6 +49,12 @@
           <RouterLink to="/resume" class="text-gray-900 hover:text-blue-500 font-medium cursor-pointer">
             My Resume
           </RouterLink>
+          <template v-if="getUser()?.uid">
+            <RouterLink to="/resume" class="text-gray-900 hover:text-blue-500 font-medium cursor-pointer">
+              Dashboard
+            </RouterLink>
+          </template>
+           
         </div>
 
         <!-- Mobile Menu Button -->
@@ -92,13 +112,6 @@
     </div>
   </header>
 </template>
-
-<script setup lang="ts">
-import { ref } from 'vue';
-import { Braces } from 'lucide-vue-next'; // Import Lucide icons
-const isMobileMenuOpen = ref(false);
-</script>
-
 <style scoped>
 @keyframes blink {
   50% {

@@ -7,12 +7,14 @@ import UtilityList from '../pages/UtilityList.vue';
 import UtilityDetailView from '../pages/UtilityDetailView.vue';
 import ComingSoon from '../pages/ComingSoon.vue';
 import auth from './auth';
+import dashboard from './dashboard'
 
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     ...auth,
+    ...dashboard,
     {
         path: '/',
         name: 'home',

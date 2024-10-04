@@ -44,7 +44,6 @@ export const useAuthStore = defineStore('auth', () => {
   };
 
   const getUser = () => {
-    //get user from local storage
     const storedUser = useLocalStorage<User | null>('maz-user', null);
     user.value = storedUser.value;
 
