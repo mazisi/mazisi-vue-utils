@@ -21,6 +21,43 @@
       </div>
     </section>
 
+    <section class="bg-gradient-to-r from-blue-500 to-teal-500 py-16" style="display: none;">
+      <div class="max-w-8xl mx-auto px-4">
+        <h2 class="text-white text-3xl font-bold text-center mb-12">Contributors</h2>
+    
+        <div class="relative flex space-x-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide">
+          <!-- Testimonial Card 1 -->
+          <div v-for="i in 6" class="snap-center flex-shrink-0 bg-white p-6 rounded-lg shadow-md w-80 space-y-4">
+            <div class="flex items-center">
+              <!-- Star Rating -->
+              <div class="flex space-x-1">
+                <i class="bx bxs-star text-blue-600 text-xl"></i>
+                <i class="bx bxs-star text-blue-600 text-xl"></i>
+                <i class="bx bxs-star text-blue-600 text-xl"></i>
+                <i class="bx bxs-star text-blue-600 text-xl"></i>
+                <i class="bx bxs-star text-blue-600 text-xl"></i>
+              </div>
+            </div>
+            <p class="font-semibold text-gray-800">"Froala is a wonder"</p>
+            <p class="text-gray-500">I feel it's one of the most powerful and best javascript editors so far in the...</p>
+            <a href="#" class="text-blue-500 hover:underline">Read more</a>
+            <!-- Footer -->
+            <div class="flex items-center space-x-3 mt-4">
+              <img src="../assets/mazisi.jpg" alt="G2 logo" class="h-6">
+              <span class="text-gray-400 text-sm">Posted on</span>
+            </div>
+            <div class="flex items-center space-x-2 mt-2">
+              <i class="bx bx-user-circle text-lg text-gray-400"></i>
+              <span class="text-gray-700 text-sm">Navya R.</span>
+              <span class="text-gray-400 text-sm">17/10/2022</span>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+    
+
     <!-- Features Section -->
     <section id="features" class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 text-center">

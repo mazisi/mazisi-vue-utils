@@ -1,6 +1,6 @@
 <template>
- 
-    <div class="p-6 bg-white shadow-md rounded-lg">
+ <LoggerExample/>
+    <div class="p-6 bg-white shadow-md rounded-lg invisible" >
       <!-- Display the content that will be used to calculate reading time -->
       <div ref="contentRef" class="prose max-w-none">
         <h1>Vue.js Composables</h1>
@@ -28,6 +28,7 @@
   <script setup lang="ts">
   import { ref } from 'vue';
   import { useReadingTime } from '../composables/useReadingTime';
+import LoggerExample from './LoggerExample.vue';
       
   const contentRef = ref<HTMLElement | undefined>(undefined);
   
