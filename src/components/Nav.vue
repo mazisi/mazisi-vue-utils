@@ -1,16 +1,19 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { Braces } from 'lucide-vue-next'; // Import Lucide icons
-const isMobileMenuOpen = ref(false);
+import { useAuthStore } from '@/stores/auth'; // Pinia Auth Store
 
-import { useAuthStore } from '@/stores/auth';
+const isMobileMenuOpen = ref(false);
+const isDropdownOpen = ref(false); // Control the dropdown visibility
 
 const authStore = useAuthStore();
 const { getUser } = authStore;
 
-
+// Toggle dropdown on click
+const toggleDropdown = () => {
+  isDropdownOpen.value = !isDropdownOpen.value;
+};
 </script>
-
 
 <template>
   <header class="bg-white shadow-lg">
@@ -22,15 +25,10 @@ const { getUser } = authStore;
           <a href="#">
             <Braces :size="48" color="#2dd4bf" />
           </a>
-
-          <!-- Error message below the logo -->
-          <!-- <p class="mt-2 text-red-500 text-sm font-semibold italic animate-blink">
-            undefined is <span class="text-blue-500 font-bold">not</span> a function
-          </p> -->
         </div>
   
         <!-- Desktop Navigation Links -->
-        <div class="hidden md:flex space-x-8">
+        <div class="hidden md:flex space-x-8 items-center">
           <RouterLink to="/" class="text-gray-900 hover:text-blue-500 font-medium">
             Home
           </RouterLink>
@@ -49,12 +47,36 @@ const { getUser } = authStore;
           <RouterLink to="/resume" class="text-gray-900 hover:text-blue-500 font-medium cursor-pointer">
             My Resume
           </RouterLink>
-          <template v-if="getUser()?.uid">
-            <RouterLink to="/resume" class="text-gray-900 hover:text-blue-500 font-medium cursor-pointer">
+
+          <!-- Dashboard Menu with Dropdown -->
+          <div class="relative group">
+            <!-- Dashboard Menu Item -->
+            <RouterLink
+              to="/dashboard"
+              class="text-gray-900 hover:text-blue-500 font-medium cursor-pointer"
+            >
               Dashboard
             </RouterLink>
-          </template>
-           
+
+            <!-- Dropdown Menu -->
+            <div
+              class="absolute hidden group-hover:block top-8 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl z-10"
+            >
+              <RouterLink
+                to="/dashboard/blogs"
+                class="block px-4 py-2 text-gray-900 hover:bg-gray-100"
+              >
+                Blog
+              </RouterLink>
+              <RouterLink
+                to="/dashboard/users"
+                class="block px-4 py-2 text-gray-900 hover:bg-gray-100"
+              >
+                Users
+              </RouterLink>
+              
+            </div>
+          </div>
         </div>
 
         <!-- Mobile Menu Button -->
@@ -112,15 +134,9 @@ const { getUser } = authStore;
     </div>
   </header>
 </template>
-<style scoped>
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
 
-.animate-blink {
-  /* animation: blink 2s steps(5, start) infinite; */
-  
+<style scoped>
+.group:hover .group-hover\:block {
+  display: block;
 }
 </style>

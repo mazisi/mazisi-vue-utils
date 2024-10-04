@@ -1,5 +1,6 @@
 import './index.css';
 import router from './router';
+import PrimeVue from 'primevue/config';
 import { VueFire, VueFireAuth } from 'vuefire'
 import { firebaseApp } from '@/firebase.js';
 import { createPinia, PiniaVuePlugin } from 'pinia';
@@ -15,5 +16,10 @@ const pinia = createPinia()
   app.use(VueFire, {
     firebaseApp,
     modules: [VueFireAuth()]
-  })
+  });
+  app.use(PrimeVue, {
+    theme: {
+        // preset: Aura
+    }
+});
   app.mount('#app');

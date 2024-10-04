@@ -23,4 +23,17 @@ import { logger } from '@/utils/logger';
       logger.divider();
     }
 
+
+/* throttle example usage
+     import { throttle} from '../../../utils/throttle';
+
+ function onResize() {
+   console.log('Resize event fired');
+ }
+
+ const throttledResize = throttle(onResize, 3000);
+
+ window.addEventListener('resize', throttledResize);
+
+**/
 </script>
