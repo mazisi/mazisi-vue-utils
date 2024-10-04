@@ -46,7 +46,7 @@
         <p>This website is open source and available for anyone to clone, modify, and use for personal or commercial projects.</p>
         <p>Feel free to visit our <a href="https://github.com/mrnlabs" class="text-teal-400 hover:underline">GitHub repository</a> to explore the codebase.</p>
       </div>
-
+{{ user }}
       <!-- Bottom Row: Copyright Text -->
       <div class="mt-8 text-center text-sm text-gray-400">
         © {{ new Date().getFullYear() }} <a href="https://mrnlabs.com" target="_blank" class="text-teal-400 hover:text-teal-300">mrnlabs</a>. All rights reserved.
@@ -56,5 +56,9 @@
 </template>
 
 <script setup lang="ts">
-// You can add any specific JavaScript here if necessary
+import { useAuthStore } from '@/stores/auth';
+
+const authStore = useAuthStore();
+const { user, getUser } = authStore;
+console.log(getUser())
 </script>

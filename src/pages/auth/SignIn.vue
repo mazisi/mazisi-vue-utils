@@ -38,21 +38,23 @@
           {{ isLoading ? '' : 'Login' }}
         </button>
       </form>
+    
     </div>
   </div>
+  
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
 import { required, email } from '@vuelidate/validators';
 import useVuelidate from '@vuelidate/core';
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import { useFirebaseAuth } from 'vuefire';
 import { LoaderPinwheel } from 'lucide-vue-next';
+import { useAuthStore } from '@/stores/auth';
 
-const isLoading = ref(false);
 
-const auth = useFirebaseAuth()
+const authStore = useAuthStore();
+const { signIn, isLoading  } = authStore;
+
 
 const form = ref({
     email: '',
@@ -65,48 +67,12 @@ const rules = {
 };
 const v$ = useVuelidate(rules, form);
 
-// Handle form submission
 const handleSubmit = async () => {
   const isFormValid = await v$.value.$validate();
   if (!isFormValid) {
     return;
   }
-  isLoading.value = true;
-  signInWithEmailAndPassword(
-    auth,
-    form.value.email,
-    form.value.password
-  )
-    .then((userCredential) => {
-      // Signed in
-      const user = userCredential.user
-      // ...
-    })
-    .catch((error) => {
-      const errorCode = error.code
-      const errorMessage = error.message
-    })
-
-// console.log({form});
-
-//   createUserWithEmailAndPassword(
-//     auth,
-//     form.value.email,
-//     form.value.password
-//   )
-//     .then((userCredential) => {
-//       isLoading.value = false;
-//       const user = userCredential.user
-//       console.log('user', user)
-//       // ...
-//     })
-//     .catch((error) => {
-//       isLoading.value = false;
-//       error.value = 'An error occurred. Please try again.'
-//       console.log('error', error.message)
-//     })
+  signIn(form.value.email, form.value.password);
 };
-
-
 
 </script>
