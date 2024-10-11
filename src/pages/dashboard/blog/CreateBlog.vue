@@ -2,9 +2,16 @@
 import FileUploadComponent from '@/components/FileUploadComponent.vue';
 import Select from '@/components/Select.vue';
 import Editor from '@tinymce/tinymce-vue';
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
+import { useFirestore, useCollection } from 'vuefire'
+import { collection } from 'firebase/firestore'
 
+const db = useFirestore()
+const data = useCollection(collection(db, 'categories'));
+//map the data
+const categoriesCollection = computed(() => data.value?.map((category) => ({ ...category, id: category.id, label: category.name })));
 const selectedOption = ref(null);
+
 </script>
 <template>
     <div class="p-6 bg-gray-50 min-h-screen">
@@ -13,7 +20,6 @@ const selectedOption = ref(null);
         <h2 class="text-2xl font-semibold mb-6">Create Blog</h2>
   
         <hr class="mb-6" />
-  
         <!-- Form Grid -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
@@ -40,12 +46,11 @@ const selectedOption = ref(null);
             </div>
           </div>
   
-          <!-- Right Column: Product Pricing and Details -->
           <div>
-            <!-- Price & Compare at Price -->
-            <div class="mb-6">{{ selectedOption }}
+           
+            <div class="mb-6">
               <label class="block text-gray-700 font-medium mb-2">Price</label>
-              <Select :options="[{value: 'USD', label: 'USD'}, {value: 'EUR', label: 'EUR'}, {value: 'GBP', label: 'GBP'}]" v-model="selectedOption"/>
+              <Select :options="categoriesCollection" v-model="selectedOption"/>
             </div>
   
             <div class="mb-6">

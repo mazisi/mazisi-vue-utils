@@ -35,7 +35,6 @@ const selectOption = (option: Option) => {
   isOpen.value = false;
 };
 
-// Toggle dropdown open/close
 const toggleDropdown = () => {
   isOpen.value = !isOpen.value;
 
